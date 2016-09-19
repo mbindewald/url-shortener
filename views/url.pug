@@ -1,10 +1,12 @@
-html
-  head
-    title= "URL Shortener - New URL Created"
-  body
-    h1= "URL Created"
-    div
-      h3= "Original"
-      p= originalUrl
-      h3= "New"
-      p= newUrl
+extends layout.pug
+
+block title
+  title= "URL Shortener - New URL Created"
+
+block content
+  h1= "URL Created"
+  div
+    h3= "Original"
+    p= originalUrl
+    h3= "New"
+    p= newUrl

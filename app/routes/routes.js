@@ -3,7 +3,7 @@ module.exports = function(app) {
 
   app.route('/')
     .get(function(req, res) {
-      res.render('index', { message: "welcome to the URL Shortener" });
+      res.render('index', { message: "welcome to the URL Shortener. Instructions blah blah. Make sure u use http or https" });
     });
   app.route('/new')
     .get(function(req, res) {

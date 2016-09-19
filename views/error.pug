@@ -1,6 +1,8 @@
-html
-  head
-    title= "URL Shortener - Error"
-  body
-    h1= "An error occurred"
-    p= message
+extends layout.pug
+
+block title
+  title= "URL Shortener - Error"
+
+block content
+  h1= "An error occurred"
+  p= message

@@ -22,7 +22,7 @@ module.exports = function(app, db) {
         res.render('url', { originalUrl: urlObj.original, newUrl: urlObj.short.toString() });
       }
       else {
-        res.render('error', { message: "Couldn't create a url based on " + urlObj.original });
+        res.render('error', { message: "Couldn't create a url based on " + urlObj.original + ". Make sure you're including http or https:// in your url." });
       }
     });
 };
@@ -49,7 +49,7 @@ function saveObj(db, obj) {
 // Returns true if url is valid
 function validateUrl(url) {
   // regex from http://stackoverflow.com/a/3809435
-  var regex = /[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/;
+  var regex = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/;
   return regex.test(url);
 }
 

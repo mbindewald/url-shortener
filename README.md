@@ -4,5 +4,5 @@
 
 # Current status
   - Fully functional, not very pretty
-  - Need to update regex to only work for http:// and https://
   - Need to make it pretty
+  - Fix CSS includes
