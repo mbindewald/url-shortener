@@ -18,8 +18,8 @@ module.exports = function(app, db) {
         var shortUrl = randomGenerator();
         urlObj.short = shortUrl;
 
-        shortUrl = process.env.appURL + shortUrl;
         saveObj(db, urlObj);
+        urlObj.short = process.env.appURL + shortUrl;
         res.render('url', { originalUrl: urlObj.original, newUrl: urlObj.short.toString() });
       }
       else {
