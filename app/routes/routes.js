@@ -3,10 +3,10 @@ module.exports = function(app) {
 
   app.route('/')
     .get(function(req, res) {
-      res.render('index', { message: "welcome to the URL Shortener. Instructions blah blah. Make sure u use http or https" });
+      res.render('index');
     });
   app.route('/new')
     .get(function(req, res) {
-      res.render('error', { message: "this is the /new page. Make sure you're correctly using the url shortener. Instructions can be found on the main page." });
+      res.render('error', { message: "this is the /new page, you should create a shortened url by adding it after /new/ in the address bar. Instructions can be found on the main page." });
     });
 };

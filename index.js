@@ -10,7 +10,7 @@ var appUrl = process.env.appURL;
 
 var app = express();
 
-app.use(express.static(path.join('/', 'static')));
+app.use(express.static(path.join(__dirname, 'static')));
 
 MongoClient.connect(dbUrl, function(err, db) {
   'use strict';

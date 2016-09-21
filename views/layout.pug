@@ -4,7 +4,12 @@ html
     block title
       title= "URL Shortener"
 
-    link(rel='stylesheet' type='text/css' href='css/styles.css')
+    link(rel='stylesheet' type='text/css' href='/css/bootstrap.min.css')
+    link(rel='stylesheet' type='text/css' href='/css/styles.css')
 
   body
-    block content
+    .jumbotron
+      a(href='/')
+        h1.text-center= "URL Shortener"
+    .container
+      block content
