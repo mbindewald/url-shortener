@@ -5,7 +5,7 @@ var pug = require('pug');
 var routes = require('./app/routes/routes.js');
 var api = require('./app/api/urlHandlers.js');
 
-var dbUrl = process.env.mongoURL || 'mongodb://localhost:27080/url_shortener';
+var dbUrl = process.env.mongoURL;
 var appUrl = process.env.appURL;
 
 var app = express();
