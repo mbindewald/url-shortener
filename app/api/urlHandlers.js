@@ -15,9 +15,10 @@ module.exports = function(app, db) {
       urlObj.original = newUrl;
 
       if (validateUrl(newUrl)) {
-        var shortUrl = process.env.appURL + randomGenerator();
+        var shortUrl = randomGenerator();
         urlObj.short = shortUrl;
 
+        shortUrl = process.env.appURL + shortUrl;
         saveObj(db, urlObj);
         res.render('url', { originalUrl: urlObj.original, newUrl: urlObj.short.toString() });
       }
