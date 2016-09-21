@@ -37,7 +37,7 @@ function findUrl(db, url, res) {
       res.redirect(result.original);
     }
     else {
-      res.render('error', { message: "Couldn't find a url in the database that corresponds with " + url });
+      res.render('error', { message: "Couldn't find a url in the database that corresponds with " + process.env.appURL + url });
     }
   });
 }
